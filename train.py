@@ -94,6 +94,16 @@ class Trainer:
     
     def load_dataset(self, data_path, data_frames=5):
         # dataset
+        p = Path(data_path)
+        if p.suffix == '':
+            p = p.with_suffix('.obj')
+        if p.is_file():
+            file_path = str(p)
+            data_name = p.stem
+            print('data_path', 0, file_path, data_name, 1)
+            print('all_file_list', [data_name], [1])
+            return [[file_path]], [data_name]
+
         all_file_list = []
         name_list = []
         data_path_list = data_path.split(' ')
@@ -351,4 +361,3 @@ if __name__=='__main__':
     args = get_config().parse_args()
     trainer = Trainer(args=args)
     trainer.run()
-
