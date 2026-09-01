@@ -9,6 +9,7 @@ Paper (OpenReview): https://openreview.net/forum?id=AzsN1qdLwv
 - Other dependencies: MinkowskwEngine, open3d, trimesh, ...
 
 ## Dataset Preparation
+- Training data: download [`traindata.zip`](https://huggingface.co/datasets/yydlmzyz/SIR-SNC-Traindata) and extract it in the project root to create `traindata/`.
 - Supported format: `.obj`
 - Place your 3D mesh datasets under `testdata/`
 - Sample datasets for quick testing (unzip first):
